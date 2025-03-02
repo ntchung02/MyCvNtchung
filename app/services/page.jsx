@@ -8,21 +8,14 @@ const services = [
     num: "01",
     title: "Web Development",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A assumenda dicta soluta est? Incidunt, provident. Quis, consequuntur! ",
+      "Creating modern, responsive, and high-performance websites tailored to user needs. Focus on clean design, seamless functionality, and optimized experiences for website development",
     href: "",
   },
   {
     num: "02",
     title: "UI/UX Design",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A assumenda dicta soluta est? Incidunt, provident. Quis, consequuntur! ",
-    href: "",
-  },
-  {
-    num: "03",
-    title: "Logo Design",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A assumenda dicta soluta est? Incidunt, provident. Quis, consequuntur! ",
+      "Crafting intuitive and visually appealing user experiences through thoughtful design. Focus on usability, aesthetics, and functionality to enhance engagement and satisfaction.",
     href: "",
   },
 ];

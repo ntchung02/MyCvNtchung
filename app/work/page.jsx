@@ -21,7 +21,7 @@ const projects = [
     category: "fullstack",
     title: "NovaWare Shop",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, architecto? Repellendus consequatur at nobis. Itaque, impedit.",
+      "NovaWare is a stylish e-commerce fashion platform built with the MERN stack, offering a seamless shopping experience with secure authentication and smooth product management.",
     stack: [
       { name: "ReactJS" },
       { name: "Javascript" },
@@ -29,15 +29,15 @@ const projects = [
       { name: "MongoDB" },
     ],
     image: "/assets/work/thumb1.png",
-    live: "",
-    github: "",
+    live: "https://novaware-rho.vercel.app/",
+    github: "https://github.com/ntchung02/Novaware",
   },
   {
     num: "02",
     category: "fullstack",
     title: "Ogani",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, architecto? Repellendus consequatur at nobis. Itaque, impedit.",
+      "Ogani is a user-friendly e-commerce platform for selling food, built with ReactJS and Laravel. It offers smooth navigation, secure transactions, and efficient product management.",
     stack: [
       { name: "Html/Css" },
       { name: "ReactJs" },
@@ -46,14 +46,14 @@ const projects = [
     ],
     image: "/assets/work/thumb1.png",
     live: "",
-    github: "",
+    github: "https://github.com/ntchung02/Ogani-laravel",
   },
   {
     num: "03",
     category: "frontend",
     title: "ZeelGram",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, architecto? Repellendus consequatur at nobis. Itaque, impedit.",
+      "ZeelGram is a dynamic social platform for web and mobile, built with ReactJS, React Native, and Java Spring. It enables seamless interactions, real-time updates, and secure data management.",
     stack: [
       { name: "ReactJs" },
       { name: "ReactNative" },
@@ -62,7 +62,7 @@ const projects = [
     ],
     image: "/assets/work/thumb1.png",
     live: "",
-    github: "",
+    github: "https://github.com/ntchung02/Zeelgram",
   },
 ];
 
@@ -86,8 +86,12 @@ const Work = () => {
           <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
             <div className="flex flex-col gap-[30px] h-[50%]">
               {/* number */}
-              <div className="text-8xl leading-none font-extrabold text-transparent text-outline">
+              <div className="text-8xl leading-none font-extrabold text-transparent text-outline hover:text-accent duration-500">
                 {project.num}
+              </div>
+              {/* title */}
+              <div className="text-3xl leading-none font-extrabold text">
+                {project.title}
               </div>
               {/* category */}
               <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">

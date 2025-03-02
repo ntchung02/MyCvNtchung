@@ -18,8 +18,10 @@ const Home = () => {
               <span className="text-accent">Nguyen Tien Chung</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
-              excel at crafting elegant digital experiences and I am profecient
-              in various programming languages and technologies.
+              Seeking a challenging full-time Web Developement in Computer
+              Science and Software Engineering where I can apply my programming
+              expertise and enhance my skills through hands-on experience with
+              cuttingedge technologies.
             </p>
             {/* btn and socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
@@ -27,9 +29,12 @@ const Home = () => {
                 variant="outline"
                 size="lg"
                 className="uppercase flex items-center gap-2"
+                asChild
               >
-                <span>Download CV</span>
-                <FiDownload className="text-xl" />
+                <a href="/assets/CV.pdf" download="Nguyen_Tien_Chung_CV.pdf">
+                  <span>Download CV</span>
+                  <FiDownload className="text-xl" />
+                </a>
               </Button>
               <div className="mb-8 xl:mb-0">
                 <Social
@@ -45,7 +50,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <Stats/>
+      <Stats />
     </section>
   );
 };

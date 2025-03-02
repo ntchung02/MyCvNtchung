@@ -20,36 +20,36 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { motion } from "framer-motion";
 
 const about = {
-  title: "about me",
+  title: "About me",
   description:
-    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit facilis et similique illum nobis natus? Dolor, neque?",
+    "This is my background, experience, and contact details, allowing you to learn more about me and connect easily.",
   info: [
     {
-      fieldName: "Name",
+      fieldName: "Name:",
       fielValue: "Nguyen Tien Chung",
     },
     {
-      fieldName: "Phone",
+      fieldName: "Phone:",
       fielValue: "(+84) 383 636 899",
     },
     {
-      fieldName: "Experience",
+      fieldName: "Experience:",
       fielValue: "1 Year",
     },
     {
-      fieldName: "Facebook",
+      fieldName: "Facebook:",
       fielValue: "fb.com/ntchung610",
     },
     {
-      fieldName: "Adress",
+      fieldName: "Adress:",
       fielValue: "Ngu Hanh Son, Da Nang",
     },
     {
-      fieldName: "Email",
+      fieldName: "Email:",
       fielValue: "ntchung0610@gmail.com",
     },
     {
-      fieldName: "Language",
+      fieldName: "Language:",
       fielValue: "Vietnamese, English",
     },
   ],
@@ -59,7 +59,7 @@ const Experience = {
   icon: "/assets/resume/badge.svg",
   title: "My experience",
   description:
-    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit facilis et similique illum nobis natus? Dolor, neque?",
+    "Although I lack extensive experience, I am eager to learn, adaptable, and committed to delivering high-quality work while continuously improving my skills.",
   items: [
     {
       company: "Softech Da Nang.",
@@ -73,7 +73,7 @@ const Education = {
   icon: "/assets/resume/cap.svg",
   title: "My education",
   description:
-    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit facilis et similique illum nobis natus? Dolor, neque?",
+    "I have completed my university coursework and am currently awaiting my graduation certificate, which I expect to receive this year.",
   items: [
     {
       institution:
@@ -87,7 +87,7 @@ const Education = {
 const skill = {
   title: "My Skills",
   description:
-    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit facilis et similique illum nobis natus? Dolor, neque?",
+    "This is my technical skills, showcasing the tools and technologies I have experience with to build high-quality web applications.",
   skillList: [
     {
       icon: <FaHtml5 />,
@@ -132,22 +132,33 @@ const Resume = () => {
         opacity: 1,
         transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
       }}
-      className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0"
+      className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0 "
     >
       <div className="container mx-auto">
         <Tabs
           defaultValue="=experience"
           className="flex flex-col xl:flex-row gap-[60px]"
         >
-          <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6 ">
-            <TabsTrigger value="experience">Experience</TabsTrigger>
-            <TabsTrigger value="education">Education</TabsTrigger>
-            <TabsTrigger value="skills">Skill</TabsTrigger>
-            <TabsTrigger value="about">About me</TabsTrigger>
-          </TabsList>
+          <div className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0">
+            <h2 className="text-[50px] text-center xl:text-left hover:text-accent duration-500">
+              Why hire me?
+            </h2>
+            <p className="text-[15px] pb-3 text-center xl:text-left">
+              Here is my resume to showcase my qualifications for potential
+              opportunities.
+            </p>
+            <div className="pt-6">
+              <TabsList className="flex flex-col gap-6">
+                <TabsTrigger value="experience">Experience</TabsTrigger>
+                <TabsTrigger value="education">Education</TabsTrigger>
+                <TabsTrigger value="skills">Skill</TabsTrigger>
+                <TabsTrigger value="about">About me</TabsTrigger>
+              </TabsList>
+            </div>
+          </div>
 
           {/* content */}
-          <div className="min-h-[70vh] w-full ">
+          <div className="min-h-[70vh] w-full pt-5 ">
             {/* experience */}
             <TabsContent value="experience" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
@@ -164,7 +175,7 @@ const Resume = () => {
                           className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col items-center justify-center lg:items-start gap-1"
                         >
                           <span className="text-accent">{item.duration}</span>
-                          <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
+                          <h3 className="text-xl pt-3 max-w-[260px] min-h-[60px] text-center lg:text-left">
                             {item.position}
                           </h3>
                           <div className="flex items-center gap-3">
@@ -194,7 +205,7 @@ const Resume = () => {
                           className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col items-center justify-center lg:items-start gap-1"
                         >
                           <span className="text-accent">{item.duration}</span>
-                          <h3 className="text-sm max-w-[260px] min-h-[60px] text-center lg:text-left">
+                          <h3 className="text-[14px] min-h-[60px] text-center lg:text-left">
                             {item.institution}
                           </h3>
                           <div className="flex items-center gap-3">
@@ -246,11 +257,16 @@ const Resume = () => {
             >
               <div className="flex flex-col gap-[30px]">
                 <h3 className="text-4xl font-bold">{about.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{about.description}</p>
+                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                  {about.description}
+                </p>
                 <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
                   {about.info.map((item, index) => {
                     return (
-                      <li key={index} className="flex items-center justify-center xl:justify-start gap-4 ">
+                      <li
+                        key={index}
+                        className="flex items-center justify-center xl:justify-start gap-4 "
+                      >
                         <span className="text-white">{item.fieldName}</span>
                         <span className="text-xl">{item.fielValue}</span>
                       </li>

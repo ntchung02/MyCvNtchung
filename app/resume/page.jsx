@@ -32,10 +32,10 @@ const about = {
       fieldName: "Phone:",
       fielValue: "(+84) 383 636 899",
     },
-    {
-      fieldName: "Experience:",
-      fielValue: "1 Year",
-    },
+    // {
+    //   fieldName: "Experience:",
+    //   fielValue: "1 Year",
+    // },
     {
       fieldName: "Facebook:",
       fielValue: "fb.com/ntchung610",

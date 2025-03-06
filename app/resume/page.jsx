@@ -201,10 +201,10 @@ const Resume = () => {
                           className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col items-center justify-center lg:items-start gap-1"
                         >
                           <span className="text-accent">{item.duration}</span>
-                          <h3 className="text-[14px] min-h-[60px] text-center lg:text-left">
+                          <h3 className="text-[13px] min-h-[60px] text-center lg:text-left">
                             {item.institution}
                           </h3>
-                          <div className="flex items-center gap-3">
+                          <div className="flex items-center gap-3 pt-3">
                             <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
                             <p className="text-white/60">{item.degree}</p>
                           </div>

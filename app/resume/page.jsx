@@ -117,10 +117,6 @@ const skill = {
       icon: <FaNodeJs />,
       name: "node.js",
     },
-    {
-      icon: <FaFigma />,
-      name: "figma",
-    },
   ],
 };
 
@@ -260,7 +256,7 @@ const Resume = () => {
                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
                   {about.description}
                 </p>
-                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
+                <ul className="grid grid-cols-1 xl:grid-cols-1 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
                   {about.info.map((item, index) => {
                     return (
                       <li
@@ -268,7 +264,7 @@ const Resume = () => {
                         className="flex items-center justify-center xl:justify-start gap-4 "
                       >
                         <span className="text-white">{item.fieldName}</span>
-                        <span className="text-xl">{item.fielValue}</span>
+                        <span className="text-lg">{item.fielValue}</span>
                       </li>
                     );
                   })}
